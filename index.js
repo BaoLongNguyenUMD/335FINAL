@@ -37,7 +37,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, '/')));
 app.set("views", path.join(__dirname, '/'));
 
-const portNumber = 8000
+const portNumber = process.env.PORT || 3030;
 const httpSuccessStatus = 200
 const webServer = http.createServer(app).listen(portNumber)
 
